@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.gson.JsonObject;
-import com.revature.hydra.panelfeedback.model.SimplePanelFeedback;
-import com.revature.hydra.panelfeedback.repository.PanelFeedbackRepository;
+import com.revature.beans.SimplePanelFeedback;
+import com.revature.hydra.panelfeedback.data.PanelFeedbackRepository;
 
 /**
  * Processes messages from other services.

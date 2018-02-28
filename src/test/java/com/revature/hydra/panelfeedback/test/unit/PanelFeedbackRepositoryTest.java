@@ -14,9 +14,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.revature.hydra.panelfeedback.model.PanelStatus;
-import com.revature.hydra.panelfeedback.model.SimplePanelFeedback;
-import com.revature.hydra.panelfeedback.repository.PanelFeedbackRepository;
+import com.revature.beans.PanelStatus;
+import com.revature.beans.SimplePanelFeedback;
+import com.revature.hydra.panelfeedback.data.PanelFeedbackRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

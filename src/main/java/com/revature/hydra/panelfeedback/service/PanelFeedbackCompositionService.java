@@ -6,19 +6,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.revature.hydra.panelfeedback.model.Batch;
-import com.revature.hydra.panelfeedback.model.Category;
-import com.revature.hydra.panelfeedback.model.Note;
-import com.revature.hydra.panelfeedback.model.NoteType;
-import com.revature.hydra.panelfeedback.model.Panel;
-import com.revature.hydra.panelfeedback.model.PanelFeedback;
-import com.revature.hydra.panelfeedback.model.PanelStatus;
-import com.revature.hydra.panelfeedback.model.SimpleCategory;
-import com.revature.hydra.panelfeedback.model.SimplePanel;
-import com.revature.hydra.panelfeedback.model.SimplePanelFeedback;
-import com.revature.hydra.panelfeedback.model.Trainee;
-import com.revature.hydra.panelfeedback.model.TrainingStatus;
-import com.revature.hydra.panelfeedback.repository.PanelFeedbackRepository;
+import com.revature.beans.Batch;
+import com.revature.beans.Category;
+import com.revature.beans.Note;
+import com.revature.beans.NoteType;
+import com.revature.beans.Panel;
+import com.revature.beans.PanelFeedback;
+import com.revature.beans.PanelStatus;
+import com.revature.beans.SimpleCategory;
+import com.revature.beans.SimplePanel;
+import com.revature.beans.SimplePanelFeedback;
+import com.revature.beans.Trainee;
+import com.revature.beans.TrainingStatus;
+import com.revature.hydra.panelfeedback.data.PanelFeedbackRepository;
 
 
 public class PanelFeedbackCompositionService {
