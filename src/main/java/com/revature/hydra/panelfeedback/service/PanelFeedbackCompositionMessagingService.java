@@ -16,7 +16,7 @@ public class PanelFeedbackCompositionMessagingService {
 	
 	private static final String SINGLE_CATEGORY_ROUTING_KEY = "utMPxDus2M9qy9Bh";
 	private static final String SINGLE_PANEL_ROUTING_KEY = "B8ptbVDNyVB28mVA";
-	private static final String RABBIT_REPO_EXCHANGE = "revature.caliber.repos";
+	private static final String RABBIT_REPO_EXCHANGE = "revature.hydra.repos";
 	
 	/**
 	 * Sends a request for a SimpleCategory to the Category service identified by

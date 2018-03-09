@@ -23,7 +23,7 @@ public class PanelFeedbackRepositoryMessagingService {
 	 * @param message The message received from the messaging queue
 	 * @return The simple panel feedbacks returned by the request dispatcher
 	 */
-	@RabbitListener(queues = "revature.caliber.repos.panelfeedback")
+	@RabbitListener(queues = "revature.hydra.repos.panelfeedback")
 	public SimplePanelFeedback receiveSingleSimplePanelFeedbackRequest(String message) {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(message);
@@ -38,7 +38,7 @@ public class PanelFeedbackRepositoryMessagingService {
 	 * @param message The message received from the messaging queue
 	 * @return The list of simple panel feedbacks returned by the request dispatcher
 	 */
-	@RabbitListener(queues = "revature.caliber.repos.panelfeedback.list")
+	@RabbitListener(queues = "revature.hydra.repos.panelfeedback.list")
 	public List<SimplePanelFeedback> receiveListSimplePanelFeedbackRequest(String message) {
 		JsonParser parser = new JsonParser();
 		JsonElement element = parser.parse(message);
