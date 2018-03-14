@@ -94,4 +94,26 @@ public class PanelFeedbackController {
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
+	@RequestMapping(value = "/panelFeedback/panel/{panelId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
+	public ResponseEntity<List<PanelFeedback>> findPanelFeedbackByPanelId(@PathVariable int panelId) {
+		log.debug("Getting category: " + panelId);
+		System.out.println("test");
+		List<PanelFeedback> panelFeedbacks = panelFeedbackService.findAllForPanel(panelId);
+		HttpStatus status = panelFeedbacks.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
+		return new ResponseEntity<>(panelFeedbacks, status);
+	}
+	
+	@RequestMapping(value = "/panelFeedback/repanel/{panelId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@Transactional(isolation = Isolation.READ_COMMITTED, propagation = Propagation.REQUIRED)
+	@PreAuthorize("hasAnyRole('VP', 'QC', 'TRAINER', 'STAGING','PANEL')")
+	public ResponseEntity<List<PanelFeedback>> findFailedPanelFeedbackByPanelId(@PathVariable int panelId) {
+		log.debug("Getting category: " + panelId);
+		System.out.println("test");
+		List<PanelFeedback> panelFeedbacks = panelFeedbackService.findFailedFeedbackByPanel(panelId);
+		HttpStatus status = panelFeedbacks.isEmpty() ? HttpStatus.NO_CONTENT : HttpStatus.OK;
+		return new ResponseEntity<>(panelFeedbacks, status);
+	}
+	
 }
